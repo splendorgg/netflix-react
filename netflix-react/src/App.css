@@ -1,14 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 body {
   background-color: black;
   margin: 0;
   padding: 0;
   color: white;
+  font-family: 'poppins';
 }
 
 .navbar {
+  width: 100%;
   display: flex;
   justify-content: space-between;
+  position: fixed;
   align-items: center;
+  color: #e5e5e5;
+  background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.7)10%, transparent);
+  z-index: 1;
+  padding: 10px;
 }
 
 .netflix-logo {
@@ -17,9 +26,19 @@ body {
 
 .navbar-pages {
   display: flex;
+  margin: 0 25px;
+}
+
+.navbar-pages ul {
+  list-style: none;
+  display: flex;
   gap: 15px;
   margin: 0 25px;
   align-items: center;
+
+  li {
+    cursor: pointer;
+  }
 }
 
 .navbar-right {
@@ -27,17 +46,124 @@ body {
   gap: 15px;
   margin: 0 25px;
   align-items: center;
+  cursor: pointer;
+}
+
+.navbar-profile {
+  display: flex;
+  align-items: center;
+  position: relative;
+
+  img {
+    border-radius: 4px;
+
+  }
+
+}
+
+.navbar-profile .dropdown {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  width: max-content;
+  background: #191919;
+  z-index: 1;
+  display: none;
+  padding: 0;
+  margin: 5px 0;
+  opacity: 0.95;
+
+  ul {
+    padding-left: 0;
+    list-style: none;
+    padding: 0px 15px;
+  }
+}
+
+.dropdown li:hover {
+  text-decoration: underline;
+}
+
+.dropdown .signout {
+  border-top: 1px solid #ccc;
+  padding-top: 10px;
+  margin-top: 10px;
+  margin-left: -15px;
+  margin-right: -15px;
+  text-align: center;
+}
+
+.navbar-profile:hover .dropdown {
+  display: block;
+}
+
+/*Home*/
+
+.hero {
+  position: relative;
+}
+
+.hero-info {
+  position: absolute;
+  padding-left: 5%;
+  top: 125px;
+}
+
+.hero-info p {
+  word-wrap: break-word;
+  width: 45%;
+  font-size: 1.2vw;
+  font-weight: 400;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, .45);
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 10px;
+  
+  .btn {
+    border: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.9);
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 18px;
+    font-weight: 500;
+    width: 115px;
+    height: 45px;
+
+  }
+  span{
+    margin-top: 5px;
+  }
+
+
+  .info {
+    background-color: rgba(109, 109, 110, 0.9);
+    color: white;
+    width: 150px;
+    padding-left: 10px;
+  }
+
+  img {
+    padding: 0;
+    width: 25px;
+    height: 25px;
+    margin-right: 7px;
+  }
 }
 
 .main-photo {
   width: 100%;
-  margin: 0;
-  padding: 0;
+  mask-image: linear-gradient(to right, transparent, black 15%);
+  -weblit-mask-image: linear-gradient(to right, transparent, black 15%);
 }
 
 .main-photo img {
   width: 100%;
-  height: 550px;
+  height: 750px;
   object-fit: cover;
 
 }
