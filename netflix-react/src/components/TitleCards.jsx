@@ -1,29 +1,74 @@
 import cardData from './Cards'
+import 'swiper/css';
+import 'swiper/css/pagination';
+import { Swiper, SwiperSlide } from 'swiper/react';
 
 function TitleCards() {
-    /*   const cardsRef = useRef()
-      const handleWheel = (event) => {
-          event.preventDefault
-          cardsRef.current.scrollLeft += event.deltaY
-      }
-      useEffect(() => {
-          cardsRef.current.addEventListener('wheel', handleWheel)
-      }, [])
-   */
     return (
-        <div className="title-card-container">
-            <h2>Your Next Watch</h2>
-            <div className="slider-wrapper">
-                <div className="slider" >
-                    {cardData.map((card, index) => {
-                        return <div className="card" key={index}>
-                            <img src={card.image} />
+        <>
+            <h2 className='next-watch' >Your Next Watch</h2>
+            <Swiper
+                slidesPerView={6}
+                spaceBetween={10}
+                className="mySwiper"
+            >
+                {cardData.map((card, index) => {
+                    return <SwiperSlide key={index} >
+                        <div className="card" >
+                            <img src={card.image} className='swiper-img' />
+                            <div className="swiper-info">
+                                <p>{card.title}</p>
+                            </div>
+                        </div>
+                    </SwiperSlide>
+                })}
+            </Swiper>
+            <h2 >Hollywood Movies</h2>
+            <Swiper
+                slidesPerView={6}
+                spaceBetween={10}
+                className="mySwiper"
+            >
+                {cardData.map((card, index) => {
+                    return <SwiperSlide key={index}>
+                        <div className="card" >
+                            <img src={card.image} className='swiper-img' />
                             <p>{card.title}</p>
                         </div>
-                    })}
-                </div>
-            </div>
-        </div>
+                    </SwiperSlide>
+                })}
+            </Swiper>
+            <h2 >Stand-Up Comedy</h2>
+            <Swiper
+                slidesPerView={6}
+                spaceBetween={10}
+                className="mySwiper"
+            >
+                {cardData.map((card, index) => {
+                    return <SwiperSlide key={index}>
+                        <div className="card" >
+                            <img src={card.image} className='swiper-img' />
+                            <p>{card.title}</p>
+                        </div>
+                    </SwiperSlide>
+                })}
+            </Swiper>
+            <h2 >New on Netflix</h2>
+            <Swiper
+                slidesPerView={6}
+                spaceBetween={10}
+                className="mySwiper"
+            >
+                {cardData.map((card, index) => {
+                    return <SwiperSlide key={index}>
+                        <div className="card" >
+                            <img src={card.image} className='swiper-img' />
+                            <p>{card.title}</p>
+                        </div>
+                    </SwiperSlide>
+                })}
+            </Swiper>
+        </>
     );
 }
 

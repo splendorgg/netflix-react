@@ -20,8 +20,11 @@ body {
   align-items: center;
   color: #e5e5e5;
   background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.7)10%, transparent);
-  z-index: 1;
+  z-index: 1000;
   padding: 10px;
+  transition: background-color 0.5s ease;
+
+
 }
 
 .netflix-logo {
@@ -42,7 +45,13 @@ body {
 
   li {
     cursor: pointer;
+    transition: color 0.3s ease;
+
   }
+  li:hover {
+    color: #b3b3b3;
+  }
+
 }
 
 .navbar-right {
@@ -60,7 +69,6 @@ body {
 
   img {
     border-radius: 4px;
-
   }
 
 }
@@ -86,6 +94,7 @@ body {
 
 .dropdown li:hover {
   text-decoration: underline;
+
 }
 
 .dropdown .signout {
@@ -101,6 +110,10 @@ body {
   display: block;
 }
 
+.nav-dark {
+  background-color: black;
+}
+
 /*Home*/
 
 .hero {
@@ -108,6 +121,7 @@ body {
 }
 
 .hero-info {
+  width: 100%;
   position: absolute;
   padding-left: 5%;
   top: 190px;
@@ -116,8 +130,8 @@ body {
 .hero-info p {
   word-wrap: break-word;
   width: 45%;
-  font-size: 1.2vw;
-  font-weight: 400;
+  font-size: 1.1vw;
+  font-weight: 300;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, .45);
 }
 
@@ -144,6 +158,9 @@ body {
     margin-top: 5px;
   }
 
+  .btn:hover {
+    opacity: 0.9;
+  }
 
   .info {
     background-color: rgba(109, 109, 110, 0.9);
@@ -180,35 +197,46 @@ body {
   margin-bottom: 30px;
 }
 
-
-.slider-wrapper {
-  overflow-x: scroll;
-  width: 100%;
-}
-
-.slider {
-  display: flex;
-  gap: 10px;
-  white-space: nowrap;
-
+.mySwiper {
 
   p {
-    font-size: 15px;
+    font-size: 16px;
     margin-top: 0;
-  }
-
-  .card {
-    position: relative;
-    flex: 1 1 auto;
-
-    img {
-      width: 237px;
-      height: 133px;
-      border-radius: 4px;
-      cursor: pointer;
-    }
+    display: block;
+    width: 100%;
   }
 }
 
+.card {
+  position: relative;
+  overflow: visible;
+}
 
-.slider::-webkit-scrollbar {}
+.swiper-img {
+  max-width: 100%;
+  cursor: pointer;
+}
+
+.next-watch {
+  margin-top: 300px;
+}
+
+.swiper {
+  height: auto;
+}
+
+.swiper-slide {
+  height: auto;
+}
+
+/* .swiper-slide:hover {
+  cursor: pointer;
+  transform: scale(1.2);
+  transition: transform 0.5s ease;
+
+}
+
+.swiper-slide img:hover {
+  height: 250px;
+
+} */
