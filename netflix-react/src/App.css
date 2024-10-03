@@ -48,6 +48,7 @@ body {
     transition: color 0.3s ease;
 
   }
+
   li:hover {
     color: #b3b3b3;
   }
@@ -229,7 +230,7 @@ body {
   height: auto;
 }
 
-/* .swiper-slide:hover {
+.swiper-slide:hover {
   cursor: pointer;
   transform: scale(1.2);
   transition: transform 0.5s ease;
@@ -239,4 +240,4 @@ body {
 .swiper-slide img:hover {
   height: 250px;
 
-} */
+}
