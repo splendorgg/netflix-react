@@ -1,6 +1,7 @@
 import React from 'react'
 import play from './photos/play-icon.png'
 import info from './photos/info-icon.png'
+import TitleCards from './TitleCards'
 
 const Home = () => {
     return (
@@ -14,6 +15,7 @@ const Home = () => {
                         <button className='btn'> <img src={play} alt="play" /> <span>Play</span></button>
                         <button className='btn info'><img src={info} alt="info" /><span>More Info</span></button>
                     </div>
+                    <TitleCards />
                 </div>
 
 
