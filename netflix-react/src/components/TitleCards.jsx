@@ -6,18 +6,19 @@ import { MdChevronLeft, MdChevronRight } from "react-icons/md";
 import { useRef } from 'react';
 
 
-function TitleCards({title}) {
-
+function TitleCards({ title }) {
+    const swiperRef = useRef(null)
     const slideLeft = () => {
-        var slider = document.querySelector('.mySwiper')
-        slider.scrollLeft = slider.scrollLeft - 550
-    }
+        if (swiperRef.current) {
+            swiperRef.current.scrollLeft = swiperRef.current.scrollLeft - 550;
+        }
+    };
+
     const slideRight = () => {
-        var slider = document.querySelector('.mySwiper')
-        slider.scrollLeft = slider.scrollLeft + 550
-
-    }
-
+        if (swiperRef.current) {
+            swiperRef.current.scrollLeft = swiperRef.current.scrollLeft + 550;
+        }
+    };
 
     return (
         <>
@@ -28,7 +29,9 @@ function TitleCards({title}) {
                 <Swiper
                     slidesPerView={6}
                     spaceBetween={10}
+                    loop={true}
                     className="mySwiper"
+                    ref={swiperRef}
                 >
                     {cardData.map((card, index) => {
                         return <SwiperSlide key={index} >
@@ -44,7 +47,7 @@ function TitleCards({title}) {
                 <MdChevronRight className='slide-arrow-right' size={40} onClick={slideRight} />
             </div>
 
-            <h2 >Hollywood Movies</h2>
+            {/* <h2 >Hollywood Movies</h2>
             <Swiper
                 slidesPerView={6}
                 spaceBetween={10}
@@ -96,7 +99,7 @@ function TitleCards({title}) {
                         </div>
                     </SwiperSlide>
                 })}
-            </Swiper>
+            </Swiper> */}
         </>
     );
 }
