@@ -15,7 +15,7 @@ const Home = () => {
                         <button className='btn'> <img src={play} alt="play" /> <span>Play</span></button>
                         <button className='btn info'><img src={info} alt="info" /><span>More Info</span></button>
                     </div>
-                    <TitleCards />
+                    <TitleCards title='Your Next Watch' />
                 </div>
 
 
