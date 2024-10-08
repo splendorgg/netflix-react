@@ -1,7 +1,14 @@
 import { MdOutlineTranslate } from "react-icons/md";
+import { FaChevronRight } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
+
 
 
 export default function Home() {
+    const navigate = useNavigate()
+    const handleSignIn = () => {
+        navigate('/signin')
+    }
     return (
         <>
             <div className="home-page">
@@ -17,10 +24,27 @@ export default function Home() {
                                 <option >English</option>
                             </select>
                         </div>
-                        <button className='signin-button'>Sign In</button>
+                        <button className='signin-button' onClick={handleSignIn}>Sign In</button>
                     </div>
                 </div>
-                div.
+                <div className="info-container">
+                    <div className="home-info">
+                        <h1>Unlimited movies, TV shows, and more</h1>
+                        <p>Starts at 349.99 TL. Cancel anytime.</p>
+                    </div>
+                    <div className="get-started">
+                        <form className="email-form">
+                            <h3>Ready to watch? Enter your email to create or restart your membership.</h3>
+                            <div className="email-container">
+                                <input type="text" id="email" placeholder="Email address" />
+                                <button className="started-button">Get Started
+                                    <FaChevronRight size={24} />
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+
+                </div>
             </div>
 
         </>

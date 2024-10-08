@@ -12,6 +12,7 @@ body {
   font-family: 'poppins';
 }
 
+/* Navbar */
 .navbar {
   width: 100%;
   display: flex;
@@ -23,7 +24,7 @@ body {
   z-index: 1000;
   padding: 10px;
   transition: background-color 0.5s ease;
-
+  height: 68px;
 
 }
 
@@ -115,7 +116,7 @@ body {
   background-color: black;
 }
 
-/*Home*/
+/*Browse*/
 
 .hero {
   position: relative;
@@ -201,6 +202,21 @@ body {
 
 
 .mySwiper {
+
+  .swiper-button-next,
+  .swiper-button-prev {
+    color: white;
+    opacity: 0;
+  }
+
+  &:hover {
+
+    .swiper-button-next,
+    .swiper-button-prev {
+      opacity: 1;
+    }
+  }
+
   p {
     font-size: 16px;
     margin-top: 0;
@@ -286,17 +302,29 @@ body {
 /*Home*/
 
 .home-page {
-  background-image: url('./components/photos/homebackground.jpg');
   background-size: cover;
-  height: 840px;
+  height: 900px;
+  background-image: url('./components/photos/homebackground.jpg');
+  position: relative;
+}
+
+.home-page::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: linear-gradient(360deg, rgba(0, 0, 0, 0.8500) 8.000%, rgba(0, 0, 0, 0.8465) 15.67%, rgba(0, 0, 0, 0.8361) 23.33%, rgba(0, 0, 0, 0.8187) 31.00%, rgba(0, 0, 0, 0.7944) 38.67%, rgba(0, 0, 0, 0.7632) 46.33%, rgba(0, 0, 0, 0.7250) 54.00%, rgba(0, 0, 0, 0.6868) 61.67%, rgba(0, 0, 0, 0.6556) 69.33%, rgba(0, 0, 0, 0.6312) 77.00%, rgba(0, 0, 0, 0.6139) 84.67%, rgba(0, 0, 0, 0.6035) 92.33%, rgba(0, 0, 0, 0.6000) 100.0%);
 }
 
 .topbar {
   display: flex;
   width: 100%;
   justify-content: space-between;
-  padding: 20px 148px;
+  padding: 20px 350px;
   align-items: center;
+  position: relative;
 
   .signin-button {
     background-color: red;
@@ -319,6 +347,8 @@ body {
     height: 32px;
     text-align: center;
     padding-left: 20px;
+    border: none;
+    outline: none;
   }
 }
 
@@ -331,9 +361,10 @@ body {
   position: relative;
   align-items: center;
 
+
   .translate {
     position: absolute;
-    left: 10px;
+    left: 7px;
     top: 6px;
 
   }
@@ -345,45 +376,212 @@ body {
   gap: 10px;
 }
 
+.info-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-self: center;
+  height: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: center;
+  width: auto;
+  align-items: center;
+
+  p {
+    font-size: 20px;
+    font-weight: 500;
+    margin-top: 0;
+  }
+}
+
+.home-info h1 {
+  max-width: 665px;
+  font-size: 60px;
+  line-height: 1.2;
+  margin-bottom: 1.7rem;
+  word-wrap: break-word;
+}
+
+.email-form {
+  display: flex;
+  flex-direction: column;
+  width: 665px;
+
+  h3 {
+    font-size: 1rem;
+    font-weight: 400;
+    color: white;
+    line-height: 1.5;
+  }
+}
+
+.email-container {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+
+  input {
+    height: 56px;
+    padding-left: 10px;
+    flex: 1 0 calc(100% - 240px);
+    font-size: 20px;
+    background: transparent;
+    color: white;
+    border-radius: 0.275rem;
+    border: 1px solid #726d6d;
+    outline: none;
+  }
 
 
+  .started-button {
+    width: 230px;
+    flex: 0 0 auto;
+    display: inline-flex;
+    gap: 5px;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    background-color: red;
+    color: white;
+    outline: none;
+    border: none;
+    border-radius: 0.275rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+  }
+}
 
+.started-button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* .card:hover .swiper-info {
+.started-button:hover::before {
   opacity: 1;
 }
 
-.card::after {
+
+
+/* Signin */
+
+.signin-page {
+  background-size: cover;
+  height: 900px;
+  background-image: url('./components/photos/homebackground.jpg');
+  position: relative;
+}
+
+.signin-page::before {
   content: '';
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(0, 0, 0, 0);
-  transition: background-color 0.3s ease;
+  background-image: linear-gradient(360deg, rgba(0, 0, 0, 0.8500) 8.000%, rgba(0, 0, 0, 0.8465) 15.67%, rgba(0, 0, 0, 0.8361) 23.33%, rgba(0, 0, 0, 0.8187) 31.00%, rgba(0, 0, 0, 0.7944) 38.67%, rgba(0, 0, 0, 0.7632) 46.33%, rgba(0, 0, 0, 0.7250) 54.00%, rgba(0, 0, 0, 0.6868) 61.67%, rgba(0, 0, 0, 0.6556) 69.33%, rgba(0, 0, 0, 0.6312) 77.00%, rgba(0, 0, 0, 0.6139) 84.67%, rgba(0, 0, 0, 0.6035) 92.33%, rgba(0, 0, 0, 0.6000) 100.0%);
 }
 
-.card:hover::after {
+.netflix-logo {
+  position: relative;
+  padding: 20px 200px;
   cursor: pointer;
-  transition: transform 0.5s ease;
-  background-color: rgba(0, 0, 0, 0.5)
-} */
+}
+
+
+.login-page-container {
+  position: relative;
+  min-height: 707px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 4px;
+  width: 450px;
+  padding: 30px 68px;
+
+  a {
+    text-decoration: none;
+  }
+
+  h1 {
+    text-align: left;
+    width: 100%;
+  }
+
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 100%;
+
+  p {
+    margin: 0 0;
+    text-align: center;
+  }
+
+  button {
+    height: 40px;
+    color: white;
+    background-color: #3e3c3b;
+    outline: none;
+    border: none;
+    border-radius: 0.275rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 16px;
+    opacity: 0.7;
+  }
+
+  text-align: center;
+
+  .sign-in-button {
+    background-color: red;
+    opacity: 1;
+  }
+
+
+
+  .input-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+
+    input {
+      background: transparent;
+      color: white;
+      border-radius: 0.275rem;
+      border: 1px solid #726d6d;
+      outline: none;
+      line-height: 1.5;
+      height: 56px;
+      padding-left: 15px;
+      font-size: 16px;
+    }
+
+  }
+}
+
+.login-footer {
+  width: 100%;
+  margin-top: 15px;
+
+  input {
+    margin-left: 0;
+  }
+
+}
