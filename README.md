@@ -11,6 +11,7 @@ Screenshots
 ![Browse](https://raw.githubusercontent.com/splendorgg/netflix-react/refs/heads/master/images/browse.png)
 
 How to Use
+
     # Clone this repository
     git clone https://github.com/splendorgg/netflix-react
     
