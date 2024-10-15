@@ -14,7 +14,7 @@ Screenshots
 How to Use
 
     # Clone this repository
-    git clone https://github.com/splendorgg/netflix-react
+    git clone https://github.com/splendorgg/netflix-react.git
     
     # Go into the repository
     cd netflix-react
