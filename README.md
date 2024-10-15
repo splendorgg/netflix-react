@@ -9,6 +9,7 @@ Screenshots
 ![Signin](https://raw.githubusercontent.com/splendorgg/netflix-react/refs/heads/master/images/signin.png)
 
 ![Browse](https://raw.githubusercontent.com/splendorgg/netflix-react/refs/heads/master/images/browse.png)
+![Browse2](https://raw.githubusercontent.com/splendorgg/netflix-react/refs/heads/master/images/browse2.png)
 
 How to Use
 
