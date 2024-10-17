@@ -4,10 +4,11 @@ This project is a clone of Netflix, built using React. Some features are missing
 
 Screenshots
 ----
+Homepage
 ![Homepage](https://raw.githubusercontent.com/splendorgg/netflix-react/refs/heads/master/images/homepage.png)
-
+Sign in
 ![Signin](https://raw.githubusercontent.com/splendorgg/netflix-react/refs/heads/master/images/signin.png)
-
+Browse
 ![Browse](https://raw.githubusercontent.com/splendorgg/netflix-react/refs/heads/master/images/browse.png)
 ![Browse2](https://raw.githubusercontent.com/splendorgg/netflix-react/refs/heads/master/images/browse2.png)
 
